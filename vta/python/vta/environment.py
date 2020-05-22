@@ -237,7 +237,7 @@ class Environment(object):
     @property
     def target_host(self):
         """The target host"""
-        if self.TARGET in ["pynq", "de10nano"]:
+        if self.TARGET in ["pynq", "de10nano", "zc706"]:
             return "llvm -target=armv7-none-linux-gnueabihf"
         if self.TARGET == "ultra96":
             return "llvm -target=aarch64-linux-gnu"
