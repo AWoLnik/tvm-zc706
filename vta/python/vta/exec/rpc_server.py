@@ -67,7 +67,7 @@ def server_start():
     def program_fpga(file_name):
         # pylint: disable=import-outside-toplevel
         env = get_env()
-        if env.TARGET == "pynq":
+        if env.TARGET == "pynq" or env.TARGET == "zc706":
             from pynq import xlnk
             # Reset xilinx driver
             xlnk.Xlnk().xlnk_reset()
