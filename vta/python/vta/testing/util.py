@@ -49,10 +49,11 @@ def run(run_func):
             # If this fails, build vta on host (make)
             # with TARGET="sim" in the json.config file.
             if env.TARGET == "sim":
+                pass
                 assert simulator.enabled()
             run_func(env, rpc.LocalSession())
 
-    elif env.TARGET in ["pynq", "ultra96", "de10nano"]:
+    elif env.TARGET in ["pynq", "ultra96", "zc706", "de10nano"]:
         # The environment variables below should be set if we are using
         # a tracker to obtain a remote for a test device
         tracker_host = os.environ.get("TVM_TRACKER_HOST", None)
