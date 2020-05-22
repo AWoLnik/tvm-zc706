@@ -55,7 +55,7 @@ def de10nano_bitstream_program(bitstream_path):
     program(bitstream_path)
 
 def bitstream_program(target, bitstream):
-    if target in ['pynq', 'ultra96']:
+    if target in ['pynq', 'ultra96', 'zc706']:
         pynq_bitstream_program(bitstream)
     elif target in ['de10nano']:
         de10nano_bitstream_program(bitstream)
